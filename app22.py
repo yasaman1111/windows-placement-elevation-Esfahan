@@ -11,13 +11,13 @@ st.write("This app displays two panel designs: one using the desired number of w
 # --------------------------
 def f(x):
     """
-    f(x) = 2.79909091 + 0.07663636*cos(x) - 0.17145455*sin(x) + 1.8216*cos(2*x)
+    f(x) = 1.5157 + 0.1875*cos(1.8365*x) - 0.1350*sin(1.8365*x)
     """
-    return 2.79909091 + 0.07663636*np.cos(x) - 0.17145455*np.sin(x) + 1.8216*np.cos(2*x)
+    return 1.5157 + 0.1875 * np.cos(1.8365 * x) - 0.1350 * np.sin(1.8365 * x)
 
 def normalized_f(x):
     # Normalize f(x) so that its variation roughly lies in [-1, 1].
-    return (f(x) - 2.79909091) / 2.00938
+    return (f(x) - 1.5157) / 0.3225  
 
 # --------------------------
 # 2) Get User Inputs (via Streamlit Sidebar)
